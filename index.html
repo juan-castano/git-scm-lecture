@@ -88,10 +88,11 @@
 				<section>
 					<h3>¿Qué es git-scm?</h3>
 					<p>Descentralización y agilidad como principales características</p>
-					<p>¿De dónde aparece git-scm?</p>
+					<p>¿De dónde nace git-scm?</p>
 				</section>
 				<section>
-					¿Qué podemos rastrear con git-scm? ¿Y qué pasa con los demás archivos?
+					<p>¿Qué podemos rastrear con git-scm? ¿Y qué pasa con los demás archivos?</p>
+					<p>¿Y qué son esas secuencias de números y letras?</p>
 				</section>
 				<section>
 					<h3>Recursos (1)</h3>
@@ -123,7 +124,9 @@
 				<section>
 					<h3>Y cómo dejar de lado...</h3>
 					<img src="img/console.png" alt="Sourcetree">
-					<h6>Recomendado <a href="http://cmder.net/" target="_blank">cmder</a></h6>
+					<h6>Recomendado
+						<a href="http://cmder.net/" target="_blank">cmder</a>
+					</h6>
 				</section>
 			</section>
 			<section data-background="#dddddd">
@@ -182,50 +185,121 @@
 				</section>
 			</section>
 			<section data-background="#dddddd">
-					<section>
-						<h3>¿Cómo gestiono un repositorio?</h3>
-						<h4>Descargando cambios</h4>
-					</section>
-					<section>
-						<h4>Clonando el repositorio</h4>
-						<p>Cuando existe un proyecto en un servidor</p>
-						<pre><code>$ git clone [URL]</code></pre>
-					</section>
-					<section>
-						<h4>Descargando cambios</h4>
-						<p>Cambios de otros desarrolladores y mezclando</p>
-						<pre><code>$ git pull origin [nombre_rama]</code></pre>
-					</section>
-					<section>
-						<h4>Descargando cambios</h4>
-						<p>Sólo cambios de otros desarrolladores</p>
-						<pre><code>$ git fetch origin</code></pre>
-					</section>
-					<section>
-						<h4>Restaurar los cambios de un archivo que está en el stage</h4>
-						<p>A veces necesitamos deshacer los cambios aceptados para un archivo</p>
-						<p>NO confundir con reset o revert</p>
-						<pre><code>$ git checkout [ nombre_fichero | . ]</code></pre>
-					</section>
-					<section>
-						<h4>Restaurar los cambios de un archivo que está fuera del stage</h4>
-						<p>A veces necesitamos deshacer los cambios de un archivo o del proyecto porque desconocemos sus cambios</p>
-						<p>NO confundir con reset o revert</p>
-						<pre><code>$ git checkout [ nombre_fichero | . ]</code></pre>
-					</section>
-				</section>
-			<section data-background="#dddddd">
 				<section>
-					<h3>Una imagen vale más que mil palabras</h3>
-					<img src="img/git-actions.svg" alt="Git actions">
+					<h3>¿Cómo gestiono un repositorio?</h3>
+					<h4>Descargando cambios</h4>
+				</section>
+				<section>
+					<h4>Clonando el repositorio</h4>
+					<p>Cuando existe un proyecto en un servidor</p>
+					<pre><code>$ git clone [URL]</code></pre>
+				</section>
+				<section>
+					<h4>Descargando cambios</h4>
+					<p>Cambios de otros desarrolladores y mezclando</p>
+					<pre><code>$ git pull origin [nombre_rama]</code></pre>
+				</section>
+				<section>
+					<h4>Descargando cambios</h4>
+					<p>Sólo cambios de otros desarrolladores</p>
+					<pre><code>$ git fetch origin</code></pre>
+				</section>
+				<section>
+					<h4>Restaurar los cambios de un archivo que está en el stage</h4>
+					<p>A veces necesitamos deshacer los cambios aceptados para un archivo</p>
+					<p>NO confundir con reset o revert</p>
+					<pre><code>$ git checkout [ nombre_fichero | . ]</code></pre>
+				</section>
+				<section>
+					<h4>Restaurar los cambios de un archivo que está fuera del stage</h4>
+					<p>A veces necesitamos deshacer los cambios de un archivo o del proyecto porque desconocemos sus cambios</p>
+					<p>NO confundir con reset o revert</p>
+					<pre><code>$ git checkout [ nombre_fichero | . ]</code></pre>
 				</section>
 			</section>
-			<section>
+			<section data-background="#dddddd">
 				<section>
-					<h3>Línea base del código</h3>
+					<h3>¿Cómo gestiono un repositorio?</h3>
+					<h4>Separando el trabajo</h4>
 				</section>
 				<section>
-					<h3>Diferencias de archivos</h3>
+					<h4>Creación de ramas</h4>
+					<p>Al comenzar un nuevo desarrollo</p>
+					<pre><code>$ git branch [nombre_rama]</code></pre>
+					<pre><code>$ git checkout -b [nombre_rama]</code></pre>
+				</section>
+				<section>
+					<h4>Eliminación de ramas</h4>
+					<p>Cambiar a otra rama alterna</p>
+					<pre><code>$ git checkout [nombre_rama_alterna]</code></pre>
+					<pre><code>$ git branch -D [nombre_rama_eliminar]</code></pre>
+				</section>
+				<section>
+					<h4>Creación de ramas desde commit anterior</h4>
+					<p>Realizar una nueva rama</p>
+					<pre><code>$ git branch [nombre_rama] [id_commit]</code></pre>
+				</section>
+			</section>
+			<section data-background="#dddddd">
+				<section>
+					<h3>¿Cómo gestiono un repositorio?</h3>
+					<h4>Uniendo el trabajo</h4>
+				</section>
+				<section>
+					<h4>Uniendo ramas</h4>
+					<p>Que mi código se agrega al igual que el de los demás</p>
+					<pre><code>$ git checkout [nombre_rama_donde_quiero_merge]</code></pre>
+					<pre><code>$ git merge [nombre_rama_donde_traera_cambios]</code></pre>
+				</section>
+				<section>
+					<h4>Resolviendo conflictos</h4>
+					<p>Tener cuidado al revisar los cambios a mezclar</p>
+					<img src="img/conflict-merge.png" width="800" height="500">
+				</section>
+			</section>
+			<section data-background="#dddddd">
+				<section>
+					<h3>¿Cómo gestiono un repositorio?</h3>
+					<h4>Etiquetando el trabajo</h4>
+				</section>
+				<section>
+					<h4>Agregar etiquetas como identificadores</h4>
+					<p>Las etiquetas me permiten versionar e identificar fácilmente las liberaciones o correcciones de bugs
+					</p>
+					<pre><code>$ git tag -a "release-2.3.1" -m "Un mensaje cualquier"</code></pre>
+					<pre><code>$ git tag -l</code></pre>
+				</section>
+				<section>
+					<h4>Me permite definir líneas base de código</h4>
+					<img src="img/git-tagpng.png" width="800" height="500">
+				</section>
+			</section>
+			<section data-background="#dddddd">
+				<section>
+					<h3>¿Cómo gestiono un repositorio?</h3>
+					<h4>Revisando el histórico de cambios</h4>
+					<pre><code>$ git log .</code></pre>
+					<pre><code>$ git log --oneline</code></pre>
+				</section>
+				<section>
+					<h3>¿Y las diferencias?</h3>
+					<pre><code>$ git diff .</code></pre>
+					<pre><code>$ git diff [branch_1] [branch_2]</code></pre>
+					<pre><code>$ git diff [commit_1] [commit_2]</code></pre>
+				</section>
+			</section>
+			<section data-background="#dddddd">
+				<section>
+					<h3>¿Cómo gestiono un repositorio?</h3>
+					<h4>Deshaciendo cambios</h4>
+					<pre><code>$ git log .</code></pre>
+					<pre><code>$ git log --oneline</code></pre>
+				</section>
+				<section>
+					<h3>¿Y las diferencias?</h3>
+					<pre><code>$ git diff .</code></pre>
+					<pre><code>$ git diff [branch_1] [branch_2]</code></pre>
+					<pre><code>$ git diff [commit_1] [commit_2]</code></pre>
 				</section>
 			</section>
 			<section>
