@@ -182,6 +182,39 @@
 				</section>
 			</section>
 			<section data-background="#dddddd">
+					<section>
+						<h3>¿Cómo gestiono un repositorio?</h3>
+						<h4>Descargando cambios</h4>
+					</section>
+					<section>
+						<h4>Clonando el repositorio</h4>
+						<p>Cuando existe un proyecto en un servidor</p>
+						<pre><code>$ git clone [URL]</code></pre>
+					</section>
+					<section>
+						<h4>Descargando cambios</h4>
+						<p>Cambios de otros desarrolladores y mezclando</p>
+						<pre><code>$ git pull origin [nombre_rama]</code></pre>
+					</section>
+					<section>
+						<h4>Descargando cambios</h4>
+						<p>Sólo cambios de otros desarrolladores</p>
+						<pre><code>$ git fetch origin</code></pre>
+					</section>
+					<section>
+						<h4>Restaurar los cambios de un archivo que está en el stage</h4>
+						<p>A veces necesitamos deshacer los cambios aceptados para un archivo</p>
+						<p>NO confundir con reset o revert</p>
+						<pre><code>$ git checkout [ nombre_fichero | . ]</code></pre>
+					</section>
+					<section>
+						<h4>Restaurar los cambios de un archivo que está fuera del stage</h4>
+						<p>A veces necesitamos deshacer los cambios de un archivo o del proyecto porque desconocemos sus cambios</p>
+						<p>NO confundir con reset o revert</p>
+						<pre><code>$ git checkout [ nombre_fichero | . ]</code></pre>
+					</section>
+				</section>
+			<section data-background="#dddddd">
 				<section>
 					<h3>Una imagen vale más que mil palabras</h3>
 					<img src="img/git-actions.svg" alt="Git actions">
@@ -206,6 +239,10 @@
 						¿Cómo puedo echarle la culpa a alguien?
 						<pre><code>git blame</code></pre>
 					</p>
+					<p>
+						¿Y si mi palabra es palabra de Dios?
+						<pre><code>git rebase</code></pre>
+					</p>
 				</section>
 			</section>
 			<section>
@@ -216,6 +253,7 @@
 						<li>Siempre tener una rama base en local</li>
 						<li>Pueden hacerse commits indiscriminadamente sin ejecutar un push</li>
 						<li>Las ramas en remoto y local pueden ser diferentes</li>
+						<li>No debe llamarse siempre origin</li>
 					</ul>
 					<img src="img/branch-structure.png" alt="Branch structure">
 				</section>
