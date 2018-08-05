@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>Git como gestor de trabajo colaborativo</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css">
@@ -30,7 +30,7 @@
 				<section>
 					<h3>Git como gestor de trabajo colaborativo</h3>
 					<div>
-						GitHub: @juan-castano
+						<p><b>GitHub:</b> @juan-castano :: Software engineer</p>
 					</div>
 				</section>
 			</section>
@@ -65,7 +65,6 @@
 							<li>Revisión (versión)</li>
 							<li>Etiquetado (tagging)</li>
 							<li>Línea base (baseline)</li>
-							<li>Repositorio</li>
 						</ul>
 					</div>
 				</section>
@@ -151,8 +150,8 @@
 				</section>
 				<section>
 					<h4>Exclusión de ficheros</h4>
-					<p>Se debe modificar el fichero .gitignore</p>
-					<p>Todo repositorio rastreado por Git tiene su base de datos en la carpeta .git es una carpeta oculta</p>
+					<p>Se debe modificar el fichero <b>.gitignore</b></p>
+					<p>Todo repositorio rastreado por Git tiene su base de datos en la carpeta <b>.git</b> es una carpeta oculta</p>
 				</section>
 			</section>
 			<section data-background="#dddddd">
@@ -167,15 +166,15 @@
 					<pre><code>$ git add [ nombre_fichero | . ]</code></pre>
 				</section>
 				<section>
-					<h4>Archivos fuera del escenario (stage)</h4>
+					<h4>Archivos fuera del escenario (unstage)</h4>
 					<p>Archivos a la espera de aceptación por parte de su creador</p>
-					<p>NO debe confundirse con los archivos excluidos</p>
+					<p><b>NO debe confundirse con los archivos excluidos</b></p>
 				</section>
 				<section>
 					<h4>Restaurar los cambios de un archivo que está en el stage</h4>
 					<p>A veces necesitamos deshacer los cambios aceptados para un archivo</p>
 					<p>NO confundir con reset o revert</p>
-					<pre><code>$ git checkout [ nombre_fichero | . ]</code></pre>
+					<pre><code>$ git reset HEAD [ nombre_fichero | . ]</code></pre>
 				</section>
 				<section>
 					<h4>Restaurar los cambios de un archivo que está fuera del stage</h4>
@@ -201,20 +200,8 @@
 				</section>
 				<section>
 					<h4>Descargando cambios</h4>
-					<p>Sólo cambios de otros desarrolladores</p>
+					<p>Objetos del repositorio remoto</p>
 					<pre><code>$ git fetch origin</code></pre>
-				</section>
-				<section>
-					<h4>Restaurar los cambios de un archivo que está en el stage</h4>
-					<p>A veces necesitamos deshacer los cambios aceptados para un archivo</p>
-					<p>NO confundir con reset o revert</p>
-					<pre><code>$ git checkout [ nombre_fichero | . ]</code></pre>
-				</section>
-				<section>
-					<h4>Restaurar los cambios de un archivo que está fuera del stage</h4>
-					<p>A veces necesitamos deshacer los cambios de un archivo o del proyecto porque desconocemos sus cambios</p>
-					<p>NO confundir con reset o revert</p>
-					<pre><code>$ git checkout [ nombre_fichero | . ]</code></pre>
 				</section>
 			</section>
 			<section data-background="#dddddd">
@@ -229,15 +216,19 @@
 					<pre><code>$ git checkout -b [nombre_rama]</code></pre>
 				</section>
 				<section>
-					<h4>Eliminación de ramas</h4>
-					<p>Cambiar a otra rama alterna</p>
-					<pre><code>$ git checkout [nombre_rama_alterna]</code></pre>
-					<pre><code>$ git branch -D [nombre_rama_eliminar]</code></pre>
-				</section>
-				<section>
 					<h4>Creación de ramas desde commit anterior</h4>
 					<p>Realizar una nueva rama</p>
 					<pre><code>$ git branch [nombre_rama] [id_commit]</code></pre>
+				</section>
+				<section>
+					<h4>Navegando entre ramas</h4>
+					<p>Los cambios que no han sido aceptados se mueven con el usuario a la rama hasta que sean aceptados en un commit</p>
+					<pre><code>$ git checkout [nombre_rama_alterna]</code></pre>
+				</section>
+				<section>
+					<h4>Eliminación de ramas</h4>
+					<p>No se puede eliminar la rama en la que se encuentra actualmente. Es necesario moverse a otra</p>
+					<pre><code>$ git branch -D [nombre_rama_eliminar]</code></pre>
 				</section>
 			</section>
 			<section data-background="#dddddd">
@@ -247,7 +238,7 @@
 				</section>
 				<section>
 					<h4>Uniendo ramas</h4>
-					<p>Que mi código se agrega al igual que el de los demás</p>
+					<p>Que mi código se agregue al igual que el de los demás</p>
 					<pre><code>$ git checkout [nombre_rama_donde_quiero_merge]</code></pre>
 					<pre><code>$ git merge [nombre_rama_donde_traera_cambios]</code></pre>
 				</section>
@@ -288,20 +279,6 @@
 					<pre><code>$ git diff [commit_1] [commit_2]</code></pre>
 				</section>
 			</section>
-			<section data-background="#dddddd">
-				<section>
-					<h3>¿Cómo gestiono un repositorio?</h3>
-					<h4>Deshaciendo cambios</h4>
-					<pre><code>$ git log .</code></pre>
-					<pre><code>$ git log --oneline</code></pre>
-				</section>
-				<section>
-					<h3>¿Y las diferencias?</h3>
-					<pre><code>$ git diff .</code></pre>
-					<pre><code>$ git diff [branch_1] [branch_2]</code></pre>
-					<pre><code>$ git diff [commit_1] [commit_2]</code></pre>
-				</section>
-			</section>
 			<section>
 				<section>
 					<h3>¿Qué sigue?</h3>
@@ -323,13 +300,16 @@
 				<section>
 					<h3>Consideraciones</h3>
 					<ul>
-						<li>La rama principal de todo repositorio es master</li>
+						<li>La rama principal de todo repositorio es master y no debería ser eliminada</li>
 						<li>Siempre tener una rama base en local</li>
-						<li>Pueden hacerse commits indiscriminadamente sin ejecutar un push</li>
+						<li>Pueden hacerse commits y crear ramas indiscriminadamente sin ejecutar un push al servidor remoto</li>
 						<li>Las ramas en remoto y local pueden ser diferentes</li>
-						<li>No debe llamarse siempre origin</li>
+						<li>No debe llamarse siempre origin, esto se hace por convención</li>
 					</ul>
-					<img src="img/branch-structure.png" alt="Branch structure">
+				</section>
+				<section>
+					<h4>Diferentes repositorios locales de usuarios</h4>
+					<img src="img/branch-structure.png" alt="Branch structure" height="500">
 				</section>
 			</section>
 		</div>
